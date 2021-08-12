@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  background-image: linear-gradient(120deg, #6580f6, #ca7de9);
   color: #fff;
   font-family: "Poppins", sans-serif;
   min-height: 100vh; /*눈에 보이는 그라디언트가 사라짐*/
@@ -32,14 +32,14 @@ form button {
 }
 
 form button {
-  color: #fda085;
+  color: #ca7de9;
   background: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #f6d365;
+  background: #dcacf0;
   color: #fff;
 }
 
@@ -71,16 +71,27 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #ff7b57;
   color: #fff;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: all 0.5s ease;
 }
 
 .complete-btn {
-  background: rgb(125, 161, 89);
+  background: linear-gradient(120deg, #6580f6, #ca7de9);
+}
+.complete-btn:hover {
+  background: #fff;
+  color: #6580f6;
+  transform: rotate(1turn);
+}
+.trash-btn:hover {
+  background: #fff;
+  color: #ff7b57;
+  transform: rotate(1turn);
 }
 
 .todo-item {
@@ -93,7 +104,7 @@ form button:hover {
 }
 
 .completed {
-  text-decoration: line-through;
+  text-decoration: line-through #6580f6;
   opacity: 0.5;
 }
 
@@ -117,18 +128,25 @@ select {
 }
 
 select {
-  color: #ff6f47;
+  color: #ca7de9;
   width: 10rem;
   cursor: pointer;
   padding: 1rem;
+  font-weight: bold;
 }
 
 .select::after {
   content: "\25BC";
-  background: #ff6f47;
+  background: #ca7de9;
   position: absolute;
   top: -5px;
   right: 0;
   padding: 1rem;
   pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: #fff;
+  color: #dcacf0;
 }
